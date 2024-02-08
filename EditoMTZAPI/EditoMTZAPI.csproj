@@ -22,13 +22,21 @@
         <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
       </PackageReference>
       <PackageReference Include="Microsoft.EntityFrameworkCore.Relational" Version="8.0.1" />
+      <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="8.0.1" />
+      <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="8.0.1" />
       <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="8.0.1">
         <PrivateAssets>all</PrivateAssets>
         <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
       </PackageReference>
+      <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="8.0.0" />
       <PackageReference Include="Npgsql" Version="8.0.1" />
       <PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL" Version="8.0.0" />
       <PackageReference Include="Swashbukle.AspNetCore" Version="2.0.0" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Compile Remove="Controllers\Ebooks.cs" />
+      <Compile Remove="Controllers\EbooksController.cs" />
     </ItemGroup>
 
 </Project>
