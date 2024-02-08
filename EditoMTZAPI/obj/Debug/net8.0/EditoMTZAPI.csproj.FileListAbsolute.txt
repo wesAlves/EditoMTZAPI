@@ -23,3 +23,12 @@
 /home/wes/Documents/01_Clientes/00_Wesley/00_Estudos/XIII_UDEMY/C#_asp_net_core/01_firsrt/EditoMTZAPI/EditoMTZAPI/obj/Debug/net8.0/EditoMTZAPI.pdb
 /home/wes/Documents/01_Clientes/00_Wesley/00_Estudos/XIII_UDEMY/C#_asp_net_core/01_firsrt/EditoMTZAPI/EditoMTZAPI/obj/Debug/net8.0/EditoMTZAPI.genruntimeconfig.cache
 /home/wes/Documents/01_Clientes/00_Wesley/00_Estudos/XIII_UDEMY/C#_asp_net_core/01_firsrt/EditoMTZAPI/EditoMTZAPI/obj/Debug/net8.0/ref/EditoMTZAPI.dll
+/home/wes/Documents/01_Clientes/00_Wesley/00_Estudos/XIII_UDEMY/C#_asp_net_core/01_firsrt/EditoMTZAPI/EditoMTZAPI/bin/Debug/net8.0/Microsoft.AspNetCore.OpenApi.dll
+/home/wes/Documents/01_Clientes/00_Wesley/00_Estudos/XIII_UDEMY/C#_asp_net_core/01_firsrt/EditoMTZAPI/EditoMTZAPI/bin/Debug/net8.0/Microsoft.OpenApi.dll
+/home/wes/Documents/01_Clientes/00_Wesley/00_Estudos/XIII_UDEMY/C#_asp_net_core/01_firsrt/EditoMTZAPI/EditoMTZAPI/bin/Debug/net8.0/Swashbuckle.AspNetCore.Swagger.dll
+/home/wes/Documents/01_Clientes/00_Wesley/00_Estudos/XIII_UDEMY/C#_asp_net_core/01_firsrt/EditoMTZAPI/EditoMTZAPI/bin/Debug/net8.0/Swashbuckle.AspNetCore.SwaggerGen.dll
+/home/wes/Documents/01_Clientes/00_Wesley/00_Estudos/XIII_UDEMY/C#_asp_net_core/01_firsrt/EditoMTZAPI/EditoMTZAPI/bin/Debug/net8.0/Swashbuckle.AspNetCore.SwaggerUI.dll
+/home/wes/Documents/01_Clientes/00_Wesley/00_Estudos/XIII_UDEMY/C#_asp_net_core/01_firsrt/EditoMTZAPI/EditoMTZAPI/bin/Debug/net8.0/Swashbukle.AspNetCore.dll
+/home/wes/Documents/01_Clientes/00_Wesley/00_Estudos/XIII_UDEMY/C#_asp_net_core/01_firsrt/EditoMTZAPI/EditoMTZAPI/obj/Debug/net8.0/EditoMTZAPI.csproj.AssemblyReference.cache
+/home/wes/Documents/01_Clientes/00_Wesley/00_Estudos/XIII_UDEMY/C#_asp_net_core/01_firsrt/EditoMTZAPI/EditoMTZAPI/obj/Debug/net8.0/EditoMTZAPI.MvcApplicationPartsAssemblyInfo.cs
+/home/wes/Documents/01_Clientes/00_Wesley/00_Estudos/XIII_UDEMY/C#_asp_net_core/01_firsrt/EditoMTZAPI/EditoMTZAPI/obj/Debug/net8.0/EditoMTZAPI.csproj.CopyComplete
