@@ -12,16 +12,16 @@ namespace EditoMTZAPI.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class EbooksCrontroller : ControllerBase
+    public class EbooksController : ControllerBase
     {
         private readonly ApplicationDbContext _context;
 
-        public EbooksCrontroller(ApplicationDbContext context)
+        public EbooksController(ApplicationDbContext context)
         {
             _context = context;
         }
 
-        // GET: api/EbooksCrontroller
+        // GET: api/ebooks
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Ebook>>> GetEbooks()
         {
