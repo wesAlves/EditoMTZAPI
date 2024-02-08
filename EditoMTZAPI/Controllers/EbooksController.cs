@@ -1,6 +1,16 @@
-namespace EditoMTZAPI.Controllers;
+using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Mvc;
 
-public class EbooksController
+namespace EditoMTZAPI.Controllers
 {
-    
+    [Route("api/[controller]")]
+    [ApiController]
+    public class EbooksController : ControllerBase
+    {
+        [HttpGet]
+        public string Method()
+        {
+            return "hello world";
+        }
+    }
 }
