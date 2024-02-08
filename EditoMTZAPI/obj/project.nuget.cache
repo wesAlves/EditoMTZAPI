@@ -1,8 +1,17 @@
 {
   "version": 2,
-  "dgSpecHash": "nYrg2RV0LZIm/bayd00NrgojO5itoIadxSGzfTUHoBq/G3kKC5rLPalAvOm83RvLJ3sx9WJcL81F5rUJtfudnQ==",
+  "dgSpecHash": "fnroOWS1pVHUlLQnze76nauzkxvHmuzeT9+3ewlXOoHd5gRuMw+1c1Ge5XkuvkWDu7WFW60tjr2cM0aLxZxI5w==",
   "success": true,
   "projectFilePath": "/home/wes/Documents/01_Clientes/00_Wesley/00_Estudos/XIII_UDEMY/C#_asp_net_core/01_firsrt/EditoMTZAPI/EditoMTZAPI/EditoMTZAPI.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "/home/wes/.nuget/packages/microsoft.aspnetcore.openapi/8.0.1/microsoft.aspnetcore.openapi.8.0.1.nupkg.sha512",
+    "/home/wes/.nuget/packages/microsoft.extensions.apidescription.server/3.0.0/microsoft.extensions.apidescription.server.3.0.0.nupkg.sha512",
+    "/home/wes/.nuget/packages/microsoft.openapi/1.4.3/microsoft.openapi.1.4.3.nupkg.sha512",
+    "/home/wes/.nuget/packages/swashbuckle.aspnetcore/6.2.3/swashbuckle.aspnetcore.6.2.3.nupkg.sha512",
+    "/home/wes/.nuget/packages/swashbuckle.aspnetcore.swagger/6.2.3/swashbuckle.aspnetcore.swagger.6.2.3.nupkg.sha512",
+    "/home/wes/.nuget/packages/swashbuckle.aspnetcore.swaggergen/6.2.3/swashbuckle.aspnetcore.swaggergen.6.2.3.nupkg.sha512",
+    "/home/wes/.nuget/packages/swashbuckle.aspnetcore.swaggerui/6.2.3/swashbuckle.aspnetcore.swaggerui.6.2.3.nupkg.sha512",
+    "/home/wes/.nuget/packages/swashbukle.aspnetcore/2.0.0/swashbukle.aspnetcore.2.0.0.nupkg.sha512"
+  ],
   "logs": []
 }
