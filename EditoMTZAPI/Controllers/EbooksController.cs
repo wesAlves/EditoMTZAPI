@@ -8,9 +8,15 @@ namespace EditoMTZAPI.Controllers
     public class EbooksController : ControllerBase
     {
         [HttpGet]
-        public string Method()
+        public string ListAll()
         {
             return "hello world";
+        }
+
+        [HttpPost]
+        public string Create()
+        {
+            return "Posting something";
         }
     }
 }
