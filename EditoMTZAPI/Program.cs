@@ -1,5 +1,8 @@
 var builder = WebApplication.CreateBuilder(args);
 
+// Add services to the container
+builder.Services.AddControllers();
+
 //adding swagger
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
@@ -10,13 +13,9 @@ var app = builder.Build();
 app.UseSwagger();
 app.UseSwaggerUI();
 
-app.UseRouting();
-
-app.UseEndpoints(endpoints =>
-{
-    endpoints.MapPost("ebooks", async (context) => { await context.Response.WriteAsync("creating new ebook"); });
-    endpoints.MapGet("ebooks", async (context) => { await context.Response.WriteAsync("Listing all ebooks"); });
-});
-
+app.UseHsts();
+app.UseHttpsRedirection();
+app.UseAuthorization();
+app.MapControllers();
 
 app.Run();
