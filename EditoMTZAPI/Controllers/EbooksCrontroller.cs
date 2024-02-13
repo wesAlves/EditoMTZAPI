@@ -46,10 +46,10 @@ namespace EditoMTZAPI.Controllers
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         // Bind here is to ensure attributes are or not in request
         [HttpPut("{id}")]
-        public async Task<IActionResult> PutEbook([Bind(nameof(Ebook.EbookID), nameof(Ebook.EbookName))] Guid id,
+        public async Task<IActionResult> PutEbook([Bind(nameof(Ebook.Id), nameof(Ebook.Title))] Guid id,
             Ebook ebook)
         {
-            if (id != ebook.EbookID)
+            if (id != ebook.Id)
             {
                 return BadRequest();
             }
@@ -63,7 +63,7 @@ namespace EditoMTZAPI.Controllers
             // _context.Entry(ebook).State = EntityState.Modified;// it is very dangerous to update all entity state, we should perform an update only in specific data
 
             // here we perform the updates only in specific entriy
-            existingEbook.EbookName = ebook.EbookName;
+            existingEbook.Title = ebook.Title;
 
             try
             {
@@ -88,12 +88,12 @@ namespace EditoMTZAPI.Controllers
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPost]
         public async Task<ActionResult<Ebook>> PostEbook(
-            [Bind(nameof(Ebook.EbookID), nameof(Ebook.EbookName))] Ebook ebook)
+            [Bind(nameof(Ebook.Id), nameof(Ebook.Title))] Ebook ebook)
         {
             _context.Ebooks.Add(ebook);
             await _context.SaveChangesAsync();
 
-            return CreatedAtAction("GetEbook", new { id = ebook.EbookID }, ebook);
+            return CreatedAtAction("GetEbook", new { id = ebook.Id }, ebook);
         }
 
         // DELETE: api/EbooksCrontroller/5
@@ -114,7 +114,7 @@ namespace EditoMTZAPI.Controllers
 
         private bool EbookExists(Guid id)
         {
-            return _context.Ebooks.Any(e => e.EbookID == id);
+            return _context.Ebooks.Any(e => e.Id == id);
         }
     }
 }

@@ -24,28 +24,52 @@ namespace EditoMTZAPI.Migrations
 
             modelBuilder.Entity("EditoMTZAPI.Models.Ebook", b =>
                 {
-                    b.Property<Guid>("EbookID")
+                    b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("uuid");
 
-                    b.Property<string>("EbookName")
+                    b.Property<string>("Description")
                         .IsRequired()
                         .HasColumnType("text");
 
-                    b.HasKey("EbookID");
+                    b.Property<string>("Language")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<string>("SubTitle")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<string>("Subject")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<string>("Title")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.HasKey("Id");
 
                     b.ToTable("Ebooks");
 
                     b.HasData(
                         new
                         {
-                            EbookID = new Guid("06dc8af0-cdf1-498c-a021-5d5a4e3d4040"),
-                            EbookName = "One"
+                            Id = new Guid("afec3f04-c005-40ba-94ae-5d128c0600fc"),
+                            Description = "",
+                            Language = "",
+                            SubTitle = "",
+                            Subject = "",
+                            Title = "One"
                         },
                         new
                         {
-                            EbookID = new Guid("3db46b91-a907-42b6-9a34-11d88640562f"),
-                            EbookName = "Two"
+                            Id = new Guid("eb13d5c2-f370-49e9-8fb7-d605a196422c"),
+                            Description = "",
+                            Language = "",
+                            SubTitle = "",
+                            Subject = "",
+                            Title = "Two"
                         });
                 });
 #pragma warning restore 612, 618

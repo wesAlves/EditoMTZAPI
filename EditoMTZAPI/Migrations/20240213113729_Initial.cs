@@ -17,21 +17,25 @@ namespace EditoMTZAPI.Migrations
                 name: "Ebooks",
                 columns: table => new
                 {
-                    EbookID = table.Column<Guid>(type: "uuid", nullable: false),
-                    EbookName = table.Column<string>(type: "text", nullable: false)
+                    Id = table.Column<Guid>(type: "uuid", nullable: false),
+                    Title = table.Column<string>(type: "text", nullable: false),
+                    SubTitle = table.Column<string>(type: "text", nullable: false),
+                    Language = table.Column<string>(type: "text", nullable: false),
+                    Subject = table.Column<string>(type: "text", nullable: false),
+                    Description = table.Column<string>(type: "text", nullable: false)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Ebooks", x => x.EbookID);
+                    table.PrimaryKey("PK_Ebooks", x => x.Id);
                 });
 
             migrationBuilder.InsertData(
                 table: "Ebooks",
-                columns: new[] { "EbookID", "EbookName" },
+                columns: new[] { "Id", "Description", "Language", "SubTitle", "Subject", "Title" },
                 values: new object[,]
                 {
-                    { new Guid("06dc8af0-cdf1-498c-a021-5d5a4e3d4040"), "One" },
-                    { new Guid("3db46b91-a907-42b6-9a34-11d88640562f"), "Two" }
+                    { new Guid("afec3f04-c005-40ba-94ae-5d128c0600fc"), "", "", "", "", "One" },
+                    { new Guid("eb13d5c2-f370-49e9-8fb7-d605a196422c"), "", "", "", "", "Two" }
                 });
         }
 
