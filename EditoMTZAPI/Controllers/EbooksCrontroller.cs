@@ -44,8 +44,10 @@ namespace EditoMTZAPI.Controllers
 
         // PUT: api/EbooksCrontroller/5
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
+        // Bind here is to ensure attributes are or not in request
         [HttpPut("{id}")]
-        public async Task<IActionResult> PutEbook(Guid id, Ebook ebook)
+        public async Task<IActionResult> PutEbook([Bind(nameof(Ebook.EbookID), nameof(Ebook.EbookName))] Guid id,
+            Ebook ebook)
         {
             if (id != ebook.EbookID)
             {
@@ -85,7 +87,8 @@ namespace EditoMTZAPI.Controllers
         // POST: api/EbooksCrontroller
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPost]
-        public async Task<ActionResult<Ebook>> PostEbook(Ebook ebook)
+        public async Task<ActionResult<Ebook>> PostEbook(
+            [Bind(nameof(Ebook.EbookID), nameof(Ebook.EbookName))] Ebook ebook)
         {
             _context.Ebooks.Add(ebook);
             await _context.SaveChangesAsync();
