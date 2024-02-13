@@ -52,7 +52,16 @@ namespace EditoMTZAPI.Controllers
                 return BadRequest();
             }
 
-            _context.Entry(ebook).State = EntityState.Modified;
+            var existingEbook = await _context.Ebooks.FindAsync(id);
+            if (existingEbook == null)
+            {
+                return NotFound();
+            }
+
+            // _context.Entry(ebook).State = EntityState.Modified;// it is very dangerous to update all entity state, we should perform an update only in specific data
+
+            // here we perform the updates only in specific entriy
+            existingEbook.EbookName = ebook.EbookName;
 
             try
             {
