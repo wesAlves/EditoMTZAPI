@@ -78,33 +78,18 @@ namespace EditoMTZAPI.Migrations
                         .IsRequired()
                         .HasColumnType("text");
 
+                    b.Property<Guid?>("TemplateId")
+                        .HasColumnType("uuid");
+
                     b.Property<string>("Title")
                         .IsRequired()
                         .HasColumnType("text");
 
                     b.HasKey("Id");
 
-                    b.ToTable("Ebooks");
+                    b.HasIndex("TemplateId");
 
-                    b.HasData(
-                        new
-                        {
-                            Id = new Guid("afec3f04-c005-40ba-94ae-5d128c0600fc"),
-                            Description = "",
-                            Language = "",
-                            SubTitle = "",
-                            Subject = "",
-                            Title = "One"
-                        },
-                        new
-                        {
-                            Id = new Guid("eb13d5c2-f370-49e9-8fb7-d605a196422c"),
-                            Description = "",
-                            Language = "",
-                            SubTitle = "",
-                            Subject = "",
-                            Title = "Two"
-                        });
+                    b.ToTable("Ebooks");
                 });
 
             modelBuilder.Entity("EditoMTZAPI.Models.Template", b =>
@@ -135,6 +120,20 @@ namespace EditoMTZAPI.Migrations
                         .HasForeignKey("EbooksId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
+                });
+
+            modelBuilder.Entity("EditoMTZAPI.Models.Ebook", b =>
+                {
+                    b.HasOne("EditoMTZAPI.Models.Template", "Template")
+                        .WithMany("Ebooks")
+                        .HasForeignKey("TemplateId");
+
+                    b.Navigation("Template");
+                });
+
+            modelBuilder.Entity("EditoMTZAPI.Models.Template", b =>
+                {
+                    b.Navigation("Ebooks");
                 });
 #pragma warning restore 612, 618
         }

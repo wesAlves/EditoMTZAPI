@@ -20,4 +20,9 @@ public class Ebook
     
     //Simple many-to-many
     public List<Chapter> Chapters { get; } = [];
+    
+    //One-to-many relation
+    public Guid? TemplateId { get; set; } // foreign key
+    public Template? Template { get; set; } // navigation
+
 }
