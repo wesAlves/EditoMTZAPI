@@ -32,4 +32,5 @@ public class ApplicationDbContext : DbContext
     }
 
     public DbSet<Template> Template { get; set; } = default!;
+    public DbSet<Chapter> Chapters { get; set; } = default!;
 }
