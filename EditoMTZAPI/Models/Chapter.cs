@@ -10,4 +10,7 @@ public class Chapter
     public string Title { get; set; }
     
     public string Subtitle { get; set; }
+    
+    //simple many-to-many
+    public List<Ebook> Ebooks { get; } = [];
 }

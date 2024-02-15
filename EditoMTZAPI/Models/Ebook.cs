@@ -17,4 +17,7 @@ public class Ebook
     [AllowNull] public string Subject { get; set; }
 
     [AllowNull] public string Description { get; set; }
+    
+    //Simple many-to-many
+    public List<Chapter> Chapters { get; } = [];
 }
