@@ -22,6 +22,21 @@ namespace EditoMTZAPI.Migrations
 
             NpgsqlModelBuilderExtensions.UseIdentityByDefaultColumns(modelBuilder);
 
+            modelBuilder.Entity("ChapterEbook", b =>
+                {
+                    b.Property<Guid>("ChaptersId")
+                        .HasColumnType("uuid");
+
+                    b.Property<Guid>("EbooksId")
+                        .HasColumnType("uuid");
+
+                    b.HasKey("ChaptersId", "EbooksId");
+
+                    b.HasIndex("EbooksId");
+
+                    b.ToTable("ChapterEbook");
+                });
+
             modelBuilder.Entity("EditoMTZAPI.Models.Chapter", b =>
                 {
                     b.Property<Guid>("Id")
@@ -105,6 +120,21 @@ namespace EditoMTZAPI.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Template");
+                });
+
+            modelBuilder.Entity("ChapterEbook", b =>
+                {
+                    b.HasOne("EditoMTZAPI.Models.Chapter", null)
+                        .WithMany()
+                        .HasForeignKey("ChaptersId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("EditoMTZAPI.Models.Ebook", null)
+                        .WithMany()
+                        .HasForeignKey("EbooksId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
                 });
 #pragma warning restore 612, 618
         }
