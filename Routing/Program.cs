@@ -1,4 +1,12 @@
+using Routing.CustomConstraints;
+
 var builder = WebApplication.CreateBuilder(args);
+
+builder.Services.AddRouting(options =>
+{
+    options.ConstraintMap.Add("months", typeof(MonthCustomConstraint));
+});
+
 var app = builder.Build();
 
 app.UseRouting(); //Enables Routing for apps
@@ -33,7 +41,7 @@ app.UseEndpoints(endpoints =>
         }
     });
 
-    endpoints.Map("sales-reports/{year:int:min(1900)}/{month:alpha}", async context =>
+    endpoints.Map("sales-reports/{year:int:min(1900)}/{month:months}", async context =>
     {
         var year = context.Request.RouteValues["year"];
         var month = context.Request.RouteValues["month"];
