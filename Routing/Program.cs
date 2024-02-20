@@ -32,6 +32,15 @@ app.UseEndpoints(endpoints =>
             await context.Response.WriteAsync("Id was not supplied");
         }
     });
+
+    endpoints.Map("sales-reports/{year:int:min(1900)}/{month:alpha}", async context =>
+    {
+        var year = context.Request.RouteValues["year"];
+        var month = context.Request.RouteValues["month"];
+        
+        await context.Response.WriteAsync($"sales report {year}/{month}");
+    });
+
 }); //based on incoming request call approperty end point
 
 app.Run(async context => { await context.Response.WriteAsync("You are at home"); });
