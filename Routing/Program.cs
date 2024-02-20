@@ -14,6 +14,15 @@ app.UseEndpoints(endpoints =>
         await context.Response.WriteAsync($"In files {fileName}.{extension}");
     });
 
+    endpoints.Map("products/details/{id=1}", async context =>
+    {
+        int id = Convert.ToInt16(context.Request.RouteValues["id"]);
+
+        await context.Response.WriteAsync($"Deatils for {id}");
+    });
+    
+    
+
 }); //based on incoming request call approperty end point
 
 app.Run(async context => { await context.Response.WriteAsync("You are at home"); });
