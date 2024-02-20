@@ -3,6 +3,12 @@ var app = builder.Build();
 
 app.UseRouting(); //Enables Routing for apps
 
+app.Use(async (context, next) =>
+{
+    context.GetEndpoint();
+    await next(context);
+});
+
 app.UseEndpoints(endpoints =>
 {
     //add endpoints here
