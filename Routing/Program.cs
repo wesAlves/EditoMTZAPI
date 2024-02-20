@@ -7,10 +7,9 @@ app.UseEndpoints(endpoints =>
 {
     endpoints.Map("files/{filename}.{extension}", async context =>
     {
-
         var fileName = Convert.ToString(context.Request.RouteValues["filename"]);
         var extension = Convert.ToString(context.Request.RouteValues["extension"]);
-        
+
         await context.Response.WriteAsync($"In files {fileName}.{extension}");
     });
 
@@ -20,9 +19,19 @@ app.UseEndpoints(endpoints =>
 
         await context.Response.WriteAsync($"Deatils for {id}");
     });
-    
-    
 
+    endpoints.Map("products/orders/{id?}", async context =>
+    {
+        if (context.Request.RouteValues.ContainsKey("id"))
+        {
+            var id = Convert.ToInt32(context.Request.RouteValues["id"]);
+            await context.Response.WriteAsync($"Order with {id}");
+        }
+        else
+        {
+            await context.Response.WriteAsync("Id was not supplied");
+        }
+    });
 }); //based on incoming request call approperty end point
 
 app.Run(async context => { await context.Response.WriteAsync("You are at home"); });
