@@ -20,7 +20,7 @@ app.UseEndpoints(endpoints =>
         await context.Response.WriteAsync($"Deatils for {id}");
     });
 
-    endpoints.Map("products/orders/{id?}", async context =>
+    endpoints.Map("products/orders/{id:int?}", async context =>
     {
         if (context.Request.RouteValues.ContainsKey("id"))
         {
